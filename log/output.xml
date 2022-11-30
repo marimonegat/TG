@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20221124 03:39:00.505" rpa="false">
-<suite id="s1" name="Test-Cases" source="C:\Users\moneg\Desktop\TG\testes\test-cases.robot">
-<test id="s1-t1" name="Sucesso - Envio de horas complementares">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20221130 00:30:56.138" rpa="false">
+<suite id="s1" name="Testes" source="C:\Users\moneg\Desktop\TG\testes">
+<suite id="s1-s1" name="Cenario-Negativo" source="C:\Users\moneg\Desktop\TG\testes\cenario-negativo.robot">
+<test id="s1-s1-t1" name="Inssucesso - Envio de horas complementares">
 <kw name="Open Session" library="base" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -9,10 +10,10 @@
 <arg>${url}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20221124 03:39:00.839" level="INFO">Opening browser 'chrome' to base url 'https://sig.ufabc.edu.br/sigaa/verTelaLogin.do'.</msg>
-<status status="PASS" starttime="20221124 03:39:00.838" endtime="20221124 03:39:04.072"></status>
+<msg timestamp="20221130 00:30:56.441" level="INFO">Opening browser 'chrome' to base url 'https://sig.ufabc.edu.br/sigaa/verTelaLogin.do'.</msg>
+<status status="PASS" starttime="20221130 00:30:56.441" endtime="20221130 00:30:59.924"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:00.838" endtime="20221124 03:39:04.073"></status>
+<status status="PASS" starttime="20221130 00:30:56.441" endtime="20221130 00:30:59.925"></status>
 </kw>
 <kw name="Dado que acesso o menu discente no sigaa" library="steps">
 <kw name="Realiza Login" library="helpers">
@@ -21,42 +22,42 @@
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<status status="PASS" starttime="20221124 03:39:04.075" endtime="20221124 03:39:04.130"></status>
+<status status="PASS" starttime="20221130 00:30:59.927" endtime="20221130 00:30:59.957"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>${username}</arg>
-<arg>m.monegat</arg>
+<arg>${userLogin}</arg>
 </arguments>
-<msg timestamp="20221124 03:39:04.131" level="INFO">Typing text 'm.monegat' into text field 'css:input[name='user.login']'.</msg>
-<status status="PASS" starttime="20221124 03:39:04.131" endtime="20221124 03:39:04.262"></status>
+<msg timestamp="20221130 00:30:59.957" level="INFO">Typing text 'm.monegat' into text field 'css:input[name='user.login']'.</msg>
+<status status="PASS" starttime="20221130 00:30:59.957" endtime="20221130 00:31:00.030"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>${password}</arg>
-<arg>Zacaiaiefr0n</arg>
+<arg>${passwordLogin}</arg>
 </arguments>
-<msg timestamp="20221124 03:39:04.262" level="INFO">Typing text 'Zacaiaiefr0n' into text field 'css:input[name='user.senha']'.</msg>
-<status status="PASS" starttime="20221124 03:39:04.262" endtime="20221124 03:39:04.388"></status>
+<msg timestamp="20221130 00:31:00.030" level="INFO">Typing text 'Zacaiaiefr0n' into text field 'css:input[name='user.senha']'.</msg>
+<status status="PASS" starttime="20221130 00:31:00.030" endtime="20221130 00:31:00.126"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${login_button}</arg>
 </arguments>
-<msg timestamp="20221124 03:39:04.389" level="INFO">Clicking element 'css:input[value=Entrar]'.</msg>
-<status status="PASS" starttime="20221124 03:39:04.388" endtime="20221124 03:39:06.351"></status>
+<msg timestamp="20221130 00:31:00.126" level="INFO">Clicking element 'css:input[value=Entrar]'.</msg>
+<status status="PASS" starttime="20221130 00:31:00.126" endtime="20221130 00:31:01.594"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${userInfo}</arg>
 </arguments>
-<status status="PASS" starttime="20221124 03:39:06.351" endtime="20221124 03:39:06.403"></status>
+<status status="PASS" starttime="20221130 00:31:01.594" endtime="20221130 00:31:01.622"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:04.074" endtime="20221124 03:39:06.403"></status>
+<status status="PASS" starttime="20221130 00:30:59.926" endtime="20221130 00:31:01.622"></status>
 </kw>
 <kw name="Acessa vinculo do Bacharel Inicial" library="helpers">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -64,42 +65,404 @@
 <arguments>
 <arg>${BI_option}</arg>
 </arguments>
-<msg timestamp="20221124 03:39:06.403" level="INFO">Clicking element 'id:link'.</msg>
-<status status="PASS" starttime="20221124 03:39:06.403" endtime="20221124 03:39:11.073"></status>
+<msg timestamp="20221130 00:31:01.623" level="INFO">Clicking element 'id:link'.</msg>
+<status status="PASS" starttime="20221130 00:31:01.622" endtime="20221130 00:31:03.649"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${portalDiscente}</arg>
 </arguments>
-<status status="PASS" starttime="20221124 03:39:11.073" endtime="20221124 03:39:14.382"></status>
+<status status="PASS" starttime="20221130 00:31:03.649" endtime="20221130 00:31:03.675"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${portalDiscente}</arg>
 </arguments>
-<msg timestamp="20221124 03:39:14.382" level="INFO">Clicking element 'css:li[class='discente on']'.</msg>
-<status status="PASS" starttime="20221124 03:39:14.382" endtime="20221124 03:39:16.030"></status>
+<msg timestamp="20221130 00:31:03.675" level="INFO">Clicking element 'css:li[class='discente on']'.</msg>
+<status status="PASS" starttime="20221130 00:31:03.675" endtime="20221130 00:31:05.119"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:06.403" endtime="20221124 03:39:16.030"></status>
+<status status="PASS" starttime="20221130 00:31:01.622" endtime="20221130 00:31:05.119"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:04.074" endtime="20221124 03:39:16.030"></status>
+<status status="PASS" starttime="20221130 00:30:59.925" endtime="20221130 00:31:05.120"></status>
+</kw>
+<kw name="Quando envio o formulario de horas complementares vazio" library="steps">
+<kw name="Acessa envio de horas complementares" library="helpers">
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<doc>Verifies that table row contains text ``expected``.</doc>
+<arguments>
+<arg>${officeMenuOption}</arg>
+<arg>1</arg>
+<arg>Ensino</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:05.121" endtime="20221130 00:31:05.178"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${ensinoMenu}</arg>
+</arguments>
+<assign>
+<var>${ensinoMenuList}</var>
+</assign>
+<msg timestamp="20221130 00:31:05.194" level="INFO">${ensinoMenuList} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e99eef2d0e16966083efe3ac2129cfc5", element="183b86f4-422c-41ef-96cf-a2cecba79fdd")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221130 00:31:05.178" endtime="20221130 00:31:05.194"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ensinoMenuList[0]}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:05.194" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e99eef2d0e16966083efe3ac2129cfc5", element="183b86f4-422c-41ef-96cf-a2cecba79fdd")&gt;'.</msg>
+<status status="PASS" starttime="20221130 00:31:05.194" endtime="20221130 00:31:05.242"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ensinoMenuSelected}</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:05.243" endtime="20221130 00:31:05.270"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registroHCOption}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:05.270" level="INFO">Clicking element 'css:tr[onmousedown='cmItemMouseDown (this,13)']'.</msg>
+<status status="PASS" starttime="20221130 00:31:05.270" endtime="20221130 00:31:05.824"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:05.120" endtime="20221130 00:31:05.824"></status>
+</kw>
+<kw name="Realiza envio do formulario de atividades vazio" library="helpers">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${cadastrarNovoRegistro}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:05.825" endtime="20221130 00:31:05.851"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>${cadastrarNovoRegistro}</arg>
+</arguments>
+<assign>
+<var>${novoRegistro}</var>
+</assign>
+<msg timestamp="20221130 00:31:05.858" level="INFO">${novoRegistro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e99eef2d0e16966083efe3ac2129cfc5", element="959b4547-b3ce-461c-a625-36ffbb613d50")&gt;</msg>
+<status status="PASS" starttime="20221130 00:31:05.851" endtime="20221130 00:31:05.859"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${novoRegistro}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:05.859" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e99eef2d0e16966083efe3ac2129cfc5", element="959b4547-b3ce-461c-a625-36ffbb613d50")&gt;'.</msg>
+<status status="PASS" starttime="20221130 00:31:05.859" endtime="20221130 00:31:06.643"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selecionarArquivo}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:06.644" endtime="20221130 00:31:06.670"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${botaoProximo}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:06.670" level="INFO">Clicking element 'id:form:submeter'.</msg>
+<status status="PASS" starttime="20221130 00:31:06.670" endtime="20221130 00:31:07.069"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:05.825" endtime="20221130 00:31:07.069"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:05.120" endtime="20221130 00:31:07.069"></status>
+</kw>
+<kw name="Entao mensagem de erro sera exibida" library="steps">
+<kw name="Confere mensagem de erro do envio do formulario vazio" library="helpers">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${painelErros}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:07.070" endtime="20221130 00:31:07.095"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${textoErros}</arg>
+<arg>Tipo da Atividade Autônoma: Campo obrigatório não informado.</arg>
+</arguments>
+<msg timestamp="20221130 00:31:07.126" level="INFO">Element 'css:ul[class='erros']' contains text 'Tipo da Atividade Autônoma: Campo obrigatório não informado.'.</msg>
+<status status="PASS" starttime="20221130 00:31:07.095" endtime="20221130 00:31:07.126"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${textoErros}</arg>
+<arg>Carga Horária: Campo obrigatório não informado.</arg>
+</arguments>
+<msg timestamp="20221130 00:31:07.142" level="INFO">Element 'css:ul[class='erros']' contains text 'Carga Horária: Campo obrigatório não informado.'.</msg>
+<status status="PASS" starttime="20221130 00:31:07.126" endtime="20221130 00:31:07.142"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${textoErros}</arg>
+<arg>Observação/Descrição: Campo obrigatório não informado.</arg>
+</arguments>
+<msg timestamp="20221130 00:31:07.147" level="INFO">Element 'css:ul[class='erros']' contains text 'Observação/Descrição: Campo obrigatório não informado.'.</msg>
+<status status="PASS" starttime="20221130 00:31:07.143" endtime="20221130 00:31:07.147"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${textoErros}</arg>
+<arg>Comprovante da Atividade: Campo obrigatório não informado.</arg>
+</arguments>
+<msg timestamp="20221130 00:31:07.163" level="INFO">Element 'css:ul[class='erros']' contains text 'Comprovante da Atividade: Campo obrigatório não informado.'.</msg>
+<status status="PASS" starttime="20221130 00:31:07.147" endtime="20221130 00:31:07.163"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:07.070" endtime="20221130 00:31:07.163"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:07.070" endtime="20221130 00:31:07.163"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221130 00:31:07.268" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221130 00:31:07.163" endtime="20221130 00:31:07.269"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221130 00:31:07.269" endtime="20221130 00:31:09.514"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:07.163" endtime="20221130 00:31:09.514"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:30:56.441" endtime="20221130 00:31:09.514" critical="yes"></status>
+</test>
+<doc>Teste negativo</doc>
+<status status="PASS" starttime="20221130 00:30:56.169" endtime="20221130 00:31:09.514"></status>
+</suite>
+<suite id="s1-s2" name="Cenario-Positivo" source="C:\Users\moneg\Desktop\TG\testes\cenario-positivo.robot">
+<test id="s1-s2-t1" name="Sucesso - Envio de horas complementares">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20221130 00:31:09.545" level="INFO">Opening browser 'chrome' to base url 'https://sig.ufabc.edu.br/sigaa/verTelaLogin.do'.</msg>
+<status status="PASS" starttime="20221130 00:31:09.545" endtime="20221130 00:31:12.534"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:09.545" endtime="20221130 00:31:12.534"></status>
+</kw>
+<kw name="Dado que acesso o menu discente no sigaa" library="steps">
+<kw name="Realiza Login" library="helpers">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:12.536" endtime="20221130 00:31:12.563"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${userLogin}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:12.563" level="INFO">Typing text 'm.monegat' into text field 'css:input[name='user.login']'.</msg>
+<status status="PASS" starttime="20221130 00:31:12.563" endtime="20221130 00:31:12.631"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${passwordLogin}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:12.632" level="INFO">Typing text 'Zacaiaiefr0n' into text field 'css:input[name='user.senha']'.</msg>
+<status status="PASS" starttime="20221130 00:31:12.631" endtime="20221130 00:31:12.726"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:12.726" level="INFO">Clicking element 'css:input[value=Entrar]'.</msg>
+<status status="PASS" starttime="20221130 00:31:12.726" endtime="20221130 00:31:13.690"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${userInfo}</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:13.690" endtime="20221130 00:31:13.731"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:12.535" endtime="20221130 00:31:13.731"></status>
+</kw>
+<kw name="Acessa vinculo do Bacharel Inicial" library="helpers">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BI_option}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:13.733" level="INFO">Clicking element 'id:link'.</msg>
+<status status="PASS" starttime="20221130 00:31:13.732" endtime="20221130 00:31:15.295"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${portalDiscente}</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:15.295" endtime="20221130 00:31:15.316"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${portalDiscente}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:15.317" level="INFO">Clicking element 'css:li[class='discente on']'.</msg>
+<status status="PASS" starttime="20221130 00:31:15.317" endtime="20221130 00:31:16.404"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:13.732" endtime="20221130 00:31:16.405"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:12.535" endtime="20221130 00:31:16.405"></status>
 </kw>
 <kw name="Quando envio corretamente minhas horas complementares" library="steps">
 <kw name="Acessa envio de horas complementares" library="helpers">
 <kw name="Table Row Should Contain" library="SeleniumLibrary">
 <doc>Verifies that table row contains text ``expected``.</doc>
 <arguments>
-<arg>${ensinoMenuOption}</arg>
+<arg>${officeMenuOption}</arg>
 <arg>1</arg>
 <arg>Ensino</arg>
 </arguments>
-<status status="PASS" starttime="20221124 03:39:16.037" endtime="20221124 03:39:16.217"></status>
+<status status="PASS" starttime="20221130 00:31:16.408" endtime="20221130 00:31:16.473"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:16.037" endtime="20221124 03:39:16.217"></status>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${ensinoMenu}</arg>
+</arguments>
+<assign>
+<var>${ensinoMenuList}</var>
+</assign>
+<msg timestamp="20221130 00:31:16.473" level="INFO">${ensinoMenuList} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="cb3e5a6e2ef2453069dc72cac152321d", element="532991df-b616-4ab6-9e2c-ca65946e62db")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221130 00:31:16.473" endtime="20221130 00:31:16.473"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:16.036" endtime="20221124 03:39:16.218"></status>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ensinoMenuList[0]}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:16.473" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="cb3e5a6e2ef2453069dc72cac152321d", element="532991df-b616-4ab6-9e2c-ca65946e62db")&gt;'.</msg>
+<status status="PASS" starttime="20221130 00:31:16.473" endtime="20221130 00:31:16.519"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ensinoMenuSelected}</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:16.519" endtime="20221130 00:31:16.543"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registroHCOption}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:16.543" level="INFO">Clicking element 'css:tr[onmousedown='cmItemMouseDown (this,13)']'.</msg>
+<status status="PASS" starttime="20221130 00:31:16.543" endtime="20221130 00:31:16.999"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:16.406" endtime="20221130 00:31:17.000"></status>
+</kw>
+<kw name="Realiza envio do formulario correto de uma atividade" library="helpers">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${cadastrarNovoRegistro}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:17.000" endtime="20221130 00:31:17.030"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>${cadastrarNovoRegistro}</arg>
+</arguments>
+<assign>
+<var>${novoRegistro}</var>
+</assign>
+<msg timestamp="20221130 00:31:17.037" level="INFO">${novoRegistro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="cb3e5a6e2ef2453069dc72cac152321d", element="9273abab-6e6e-4994-98dd-a06361771d6f")&gt;</msg>
+<status status="PASS" starttime="20221130 00:31:17.030" endtime="20221130 00:31:17.037"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${novoRegistro}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:17.037" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="cb3e5a6e2ef2453069dc72cac152321d", element="9273abab-6e6e-4994-98dd-a06361771d6f")&gt;'.</msg>
+<status status="PASS" starttime="20221130 00:31:17.037" endtime="20221130 00:31:17.716"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selecionarArquivo}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20221130 00:31:17.716" endtime="20221130 00:31:17.744"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${selecionarArquivo}</arg>
+<arg>${EXECDIR}/resources/files/certificado.pdf</arg>
+</arguments>
+<msg timestamp="20221130 00:31:17.744" level="INFO">Sending C:\Users\moneg\Desktop\TG\resources\files\certificado.pdf to browser.</msg>
+<status status="PASS" starttime="20221130 00:31:17.744" endtime="20221130 00:31:17.782"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selecionarGrupo}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:17.783" level="INFO">Clicking element 'id:form:tipoAtividadeAutonoma'.</msg>
+<status status="PASS" starttime="20221130 00:31:17.782" endtime="20221130 00:31:17.854"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${grupoOptions}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:17.855" level="INFO">Clicking element 'css:option[value='53082']'.</msg>
+<status status="PASS" starttime="20221130 00:31:17.854" endtime="20221130 00:31:17.909"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${observacoes}</arg>
+<arg>2 horas</arg>
+</arguments>
+<msg timestamp="20221130 00:31:17.910" level="INFO">Typing text '2 horas' into text field 'id:form:observacoes'.</msg>
+<status status="PASS" starttime="20221130 00:31:17.910" endtime="20221130 00:31:18.036"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${botaoProximo}</arg>
+</arguments>
+<msg timestamp="20221130 00:31:18.037" level="INFO">Clicking element 'id:form:submeter'.</msg>
+<status status="PASS" starttime="20221130 00:31:18.036" endtime="20221130 00:31:18.564"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:17.000" endtime="20221130 00:31:18.565"></status>
+</kw>
+<status status="PASS" starttime="20221130 00:31:16.406" endtime="20221130 00:31:18.565"></status>
 </kw>
 <kw name="Entao documentos serao enviados para analise" library="steps">
 <kw name="Sleep" library="BuiltIn">
@@ -107,37 +470,41 @@
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20221124 03:39:18.228" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 03:39:16.219" endtime="20221124 03:39:18.229"></status>
+<msg timestamp="20221130 00:31:20.577" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221130 00:31:18.566" endtime="20221130 00:31:20.577"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:16.219" endtime="20221124 03:39:18.229"></status>
+<status status="PASS" starttime="20221130 00:31:18.565" endtime="20221130 00:31:20.577"></status>
 </kw>
 <kw name="Close Session" library="base" type="teardown">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20221124 03:39:18.381" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20221124 03:39:18.229" endtime="20221124 03:39:18.381"></status>
+<msg timestamp="20221130 00:31:20.690" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221130 00:31:20.577" endtime="20221130 00:31:20.690"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221124 03:39:18.381" endtime="20221124 03:39:20.679"></status>
+<status status="PASS" starttime="20221130 00:31:20.690" endtime="20221130 00:31:24.540"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:18.229" endtime="20221124 03:39:20.680"></status>
+<status status="PASS" starttime="20221130 00:31:20.577" endtime="20221130 00:31:24.540"></status>
 </kw>
-<status status="PASS" starttime="20221124 03:39:00.837" endtime="20221124 03:39:20.682" critical="yes"></status>
+<status status="PASS" starttime="20221130 00:31:09.545" endtime="20221130 00:31:24.540" critical="yes"></status>
 </test>
-<doc>Suite dos testes de cadastro</doc>
-<status status="PASS" starttime="20221124 03:39:00.507" endtime="20221124 03:39:20.689"></status>
+<doc>Teste positivo</doc>
+<status status="PASS" starttime="20221130 00:31:09.529" endtime="20221130 00:31:24.540"></status>
+</suite>
+<status status="PASS" starttime="20221130 00:30:56.138" endtime="20221130 00:31:24.555"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Test-Cases">Test-Cases</stat>
+<stat pass="2" fail="0" id="s1" name="Testes">Testes</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Cenario-Negativo">Testes.Cenario-Negativo</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Cenario-Positivo">Testes.Cenario-Positivo</stat>
 </suite>
 </statistics>
 <errors>

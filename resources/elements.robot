@@ -13,4 +13,20 @@ ${BI_option}        id:link
 ${portalDiscente}   css:li[class='discente on']
 
 #menu discente
-${ensinoMenuOption}     css:table[summary='main menu']
+${officeMenuOption}     css:table[summary='main menu']
+${ensinoMenu}           css:td[class='ThemeOfficeMainItem']
+${ensinoMenuSelected}   css:td[class='ThemeOfficeMainItemHover']
+${ensinoOptions}        css:div[id='cmSubMenuID1']          tr[class='ThemeOfficeMainItem']
+${registroHCOption}     css:tr[onmousedown='cmItemMouseDown (this,13)']
+
+#registro da atividade complementar
+${cadastrarNovoRegistro}    css:div[class='infoAltRem']     a[href='#']
+${selecionarArquivo}        id:form:arquivo
+${selecionarGrupo}          id:form:tipoAtividadeAutonoma
+${grupoOptions}             css:option[value='53082']
+${observacoes}              id:form:observacoes
+${botaoProximo}             id:form:submeter
+${painelErros}              id:painel-erros
+${textoErros}               css:ul[class='erros']
+${botaoCadastrar}           id:form:cadastrar
+${descricaoOperacao}        css:div[class='descricaoOperacao']

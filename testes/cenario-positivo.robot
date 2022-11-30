@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Suite dos testes de cadastro
+Documentation       Teste positivo
 Test Setup          Open Session
 Test Teardown       Close Session
 

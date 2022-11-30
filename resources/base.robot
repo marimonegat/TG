@@ -9,6 +9,8 @@ Resource            helpers.robot
 
 *** Variables ***
 ${url}                  https://sig.ufabc.edu.br/sigaa/verTelaLogin.do
+${userLogin}            
+${passwordLogin}        
 
 *** Keywords ***
 Open Session
